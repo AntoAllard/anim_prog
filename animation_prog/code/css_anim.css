@@ -45,7 +45,8 @@
   .terre {
     width: 50%;
     height: 100%;
-    background-color: blue;
+    background: rgb(180,240,255);
+background: radial-gradient(circle, rgba(180,240,255,1) 0%, rgba(50,179,236,1) 10%, rgba(255,255,255,0) 60%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,4 +57,5 @@
       position: relative;
       width: 60%;
       height: auto;
+      overflow: visible;
   }
