@@ -7,7 +7,7 @@ gsap.timeline({
     pin: true,
     scrub: 1,
     start: 'top 0%',
-    end: '1600% 0%',
+    end: '1200% 0%',
     trigger: '.wrapper-scene',
   },
   defaults: { 
