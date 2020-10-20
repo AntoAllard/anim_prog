@@ -1,10 +1,11 @@
+//Planète
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.timeline({
   scrollTrigger: {
     pin: true,
     scrub: 1,
-    markers: true,
     start: 'top 0%',
     end: '1600% 0%',
     trigger: '.wrapper-scene',
@@ -332,3 +333,5 @@ gsap.to('#groupeHeliceAu', {
   ease: 'none',
   duration: '2.5',
 });
+
+// Texte et dates
