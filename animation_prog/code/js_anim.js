@@ -7,7 +7,7 @@ gsap.timeline({
     pin: true,
     scrub: 1,
     start: 'top 0%',
-    end: '1200% 0%',
+    end: '700% 0%',
     trigger: '.wrapper-scene',
   },
   defaults: { 
@@ -265,17 +265,19 @@ gsap.timeline({
 gsap.to('.imgTerre', {
   repeat: -1,
   rotation: 360,
-  transformOrigin:"center",
   ease: 'none',
   duration: '40', 
+  transformOrigin: '48% 50%',
 });
 
-gsap.to('.imgTerre', {
+gsap.to('.soleil', {
   repeat: -1,
+  scale: 1.025,
+  transformOrigin:"center",
   ease: 'none',
-  duration: '3',
-  scale: 1.1,
+  duration: '1',
   yoyo: true,
+  rotation: 1,
 });
 
 gsap.to('#groupeHeliceEur01', {
@@ -283,7 +285,7 @@ gsap.to('#groupeHeliceEur01', {
   rotation: 360,
   transformOrigin:"50% 36%",
   ease: 'none',
-  duration: '3',
+  duration: '0.75',
 });
 
 gsap.to('#groupeHeliceEur02', {
@@ -335,3 +337,93 @@ gsap.to('#groupeHeliceAu', {
 });
 
 // Texte et dates
+
+gsap.timeline({
+  scrollTrigger: {
+    markers: true,
+    start: '50% 0%',
+    end: '100% 0%',
+    trigger: '.wrapper-scene',
+    toggleActions: 'play reverse play reverse',
+  },
+  defaults: { 
+    ease: 'back',
+    opacity: 0,
+  },
+})
+
+.from('.histoire1981',{
+  x: "-100%",
+  duration: 0.5,
+})
+
+gsap.timeline({
+  scrollTrigger: {
+    markers: true,
+    start: '200% 0%',
+    end: '250% 0%',
+    trigger: '.wrapper-scene',
+    toggleActions: 'play reverse play reverse',
+  },
+  defaults: { 
+    ease: 'back',
+    opacity: 0,
+  },
+})
+
+.from('.histoire1990',{
+  x: "-100%",
+  duration: 0.5,
+})
+
+gsap.timeline({
+  scrollTrigger: {
+    markers: true,
+    start: '350% 0%',
+    end: '400% 0%',
+    trigger: '.wrapper-scene',
+    toggleActions: 'play reverse play reverse',
+  },
+  defaults: { 
+    ease: 'back',
+    opacity: 0,
+  },
+})
+
+.from('.histoire2000',{
+  x: "-100%",
+  duration: 0.5,
+})
+
+gsap.timeline({
+  scrollTrigger: {
+    markers: true,
+    start: '500% 0%',
+    end: '550% 0%',
+    trigger: '.wrapper-scene',
+    toggleActions: 'play reverse play reverse',
+  },
+  defaults: { 
+    ease: 'back',
+    opacity: 0,
+  },
+})
+
+.from('.histoire2010',{
+  x: "-100%",
+  duration: 0.5,
+})
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.wrapper-scene',
+    start: '600% 0%',
+    end: '700% 0%',
+    toggleActions: 'play none play reverse',
+    
+  }
+})
+
+.to(".soleil", 0.1, {zIndex: "1"})
+.to(".soleil", 1.5, {top: "50%", left: "50%", transform: "translate(-75%,-50%)", ease: 'back.inOut', })
+.to("#soleil", 1, {morphSVG: "#coeur", fill:"#F2F2E8"}, '<')

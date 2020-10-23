@@ -36,15 +36,8 @@
     display: flex;
   }
   
-  .text {
-    width: 50%;
-    height: 100%;
-    background: rgb(180,240,255);
-background: linear-gradient(0deg, rgba(180,240,255,0) 0%, rgba(50,179,236,0.8547794117647058) 50%, rgba(255,255,255,0) 100%);
-  }
-  
   .terre {
-    width: 50%;
+    width: 100%;
     height: 100%;
     background: rgb(180,240,255);
 background: linear-gradient(0deg, rgba(180,240,255,0) 0%, rgba(50,179,236,0.8547794117647058) 50%, rgba(255,255,255,0) 100%);
@@ -56,7 +49,154 @@ background: linear-gradient(0deg, rgba(180,240,255,0) 0%, rgba(50,179,236,0.8547
   
   .imgTerre {
       position: relative;
-      width: 60%;
+      width: 40%;
       height: auto;
       overflow: visible;
   }
+
+  .descHistoire {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    
+  }
+
+  .dateHist {
+    top: 1%;
+    left: 50%;
+    transform:translateX(-50%);
+    position: absolute;
+    color:#F2F2E8;
+    font-size: 48px;
+  }
+
+  .evenementAnnee {
+    font-size: 40px;
+    color:#F2F2E8;
+    padding: 0px 20px 0px 0px;
+    margin: 0px;
+  }
+  .evenementDesc {
+    color: #254B58;
+    font-size: 20px;
+    margin: auto 0 auto 0;
+  }
+
+  .evenementsHist{
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 0px;
+  }
+
+  .histoire1981{
+    opacity: 1;
+  }
+
+  .histoire1990{
+    opacity: 1;
+  }
+
+  .histoire2000{
+    opacity: 1;
+  }
+
+  .histoire2010{
+    opacity: 1;
+  }
+
+  .sectionHist01{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    margin: auto;
+    position: relative;
+    overflow: scroll;
+    max-height: 80%;
+  }
+  
+  .soleil{
+    width: 10%;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    overflow: visible;
+  
+  }
+
+  .coeur{
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    z-index: 1;
+  }
+
+  #coeur{
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;  
+}
+
+  @media (max-width: 768px){
+    .imgTerre {
+      width: 70%;
+  }
+  .evenementAnnee {
+    font-size: 25px;
+  }
+  .evenementDesc {
+    font-size: 20px;
+  }
+  .sectionHist01{
+    width: 80%;
+    overflow: scroll;
+    max-height: 80%;
+  }
+  .soleil{
+    width: 15%;
+    top: 15%;
+    left: 20%;
+    overflow: visible;
+  }
+  .dateHist {
+    top: 5%;
+    font-size: 30px;
+  }
+}
+
+  @media (max-width: 425px){
+  .imgTerre {
+    width: 80%;
+  }
+  .evenementAnnee {
+    font-size: 25px;
+  }
+  .evenementDesc {
+    font-size: 20px;
+  }
+  .sectionHist01{
+    width: 80%;
+    overflow: scroll;
+    max-height: 80%;
+  }
+  .soleil{
+    width: 20%;
+    top: 20%;
+    left: 20%;
+    overflow: visible;
+  }
+  .dateHist {
+    top: 5%;
+    font-size: 30px;
+  }
+}
