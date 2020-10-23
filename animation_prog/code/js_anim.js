@@ -1,4 +1,4 @@
-//Planète
+//Planète------------------------------------------------------------------------------------
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -270,16 +270,6 @@ gsap.to('.imgTerre', {
   transformOrigin: '48% 50%',
 });
 
-gsap.to('.soleil', {
-  repeat: -1,
-  scale: 1.025,
-  transformOrigin:"center",
-  ease: 'none',
-  duration: '1',
-  yoyo: true,
-  rotation: 1,
-});
-
 gsap.to('#groupeHeliceEur01', {
   repeat: -1,
   rotation: 360,
@@ -336,7 +326,7 @@ gsap.to('#groupeHeliceAu', {
   duration: '2.5',
 });
 
-// Texte et dates
+// Texte et dates-------------------------------------------------------------------------------------
 
 gsap.timeline({
   scrollTrigger: {
@@ -414,6 +404,19 @@ gsap.timeline({
   duration: 0.5,
 })
 
+// Soleil et coeur-------------------------------------------------------------------------------------
+
+
+gsap.to('.soleil', {
+  repeat: -1,
+  scale: 1.025,
+  transformOrigin:"center",
+  ease: 'none',
+  duration: '1',
+  yoyo: true,
+  rotation: 1,
+});
+
 gsap.timeline({
   scrollTrigger: {
     trigger: '.wrapper-scene',
@@ -427,3 +430,4 @@ gsap.timeline({
 .to(".soleil", 0.1, {zIndex: "1"})
 .to(".soleil", 1.5, {top: "50%", left: "50%", transform: "translate(-75%,-50%)", ease: 'back.inOut', })
 .to("#soleil", 1, {morphSVG: "#coeur", fill:"#F2F2E8"}, '<')
+.to(".natureQuebecLogo", 0.5, {opacity: '1'})
